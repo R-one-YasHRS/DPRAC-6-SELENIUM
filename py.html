@@ -1,0 +1,22 @@
+from selenium import webdriver
+import time
+from selenium.webdriver.common.keys import Keys
+print("sample test case started")
+driver = webdriver.Chrome()
+driver.maximize_window()
+driver.get("http://localhost/workshop/signup.html")
+time.sleep(3)
+driver.find_element("name", "username").send_keys("yash_rs")
+time.sleep(3)
+driver.find_element("name", "phone").send_keys("6376936589")
+time.sleep(3)
+driver.find_element("name", "email").send_keys("yashshirbhatesl@gmail.com")
+time.sleep(3)
+driver.find_element("name", "password").send_keys("passpasspassword")
+time.sleep(3)
+
+driver.find_element("name", "submit").send_keys(Keys.ENTER)
+time.sleep(4)
+
+driver.close()
+print("sample test case successfully completed")
